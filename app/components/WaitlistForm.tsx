@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent, useRef } from "react";
+import Image from "next/image";
 
 export function WaitlistForm() {
   const [submitting, setSubmitting] = useState(false);
@@ -107,26 +108,17 @@ export function WaitlistForm() {
           onClick={handleClose}
         >
           <div
-            className="mx-4 w-full max-w-sm rounded-2xl border border-border-light bg-hero-bg p-8 text-center shadow-xl"
+            className="mx-4 w-full max-w-xl rounded-2xl border border-border-light bg-hero-bg p-12 text-center shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Checkmark */}
-            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-emerald/15">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-emerald"
-              >
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
+            <Image
+              src="/hero-image.png"
+              alt="Dirty Money app screenshot"
+              width={4000}
+              height={2250}
+              className="mb-5 w-full rounded-xl"
+              unoptimized
+            />
 
             <h3 className="mb-2 text-xl font-bold text-hero-heading">
               Thanks for signing up!
