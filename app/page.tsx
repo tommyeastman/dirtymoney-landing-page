@@ -61,123 +61,6 @@ function SwitchIcon() {
   );
 }
 
-function ScanIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M3 7V5a2 2 0 0 1 2-2h2" />
-      <path d="M17 3h2a2 2 0 0 1 2 2v2" />
-      <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
-      <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
-      <line x1="7" y1="12" x2="17" y2="12" />
-    </svg>
-  );
-}
-
-function LeafIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.78 10-10 10Z" />
-      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-    </svg>
-  );
-}
-
-function FilterIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
-    </svg>
-  );
-}
-
-function ShieldIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      <path d="m9 12 2 2 4-4" />
-    </svg>
-  );
-}
-
-function SmartphoneIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-      <line x1="12" y1="18" x2="12.01" y2="18" />
-    </svg>
-  );
-}
-
-function UsersIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>
-  );
-}
 
 const steps = [
   {
@@ -200,44 +83,6 @@ const steps = [
   },
 ];
 
-const features = [
-  {
-    icon: <ScanIcon />,
-    title: "Transaction Scanning",
-    description:
-      "Automatically analyze your spending and identify companies with questionable ethics records.",
-  },
-  {
-    icon: <LeafIcon />,
-    title: "Ethical Alternatives",
-    description:
-      "Get personalized recommendations for ethical brands and services that align with your values.",
-  },
-  {
-    icon: <FilterIcon />,
-    title: "Cause-Based Filtering",
-    description:
-      "Filter by the causes you care about most — environment, labor, human rights, political donations, and more.",
-  },
-  {
-    icon: <ShieldIcon />,
-    title: "Privacy First",
-    description:
-      "Your financial data is encrypted end-to-end. We never sell your data or share it with third parties.",
-  },
-  {
-    icon: <SmartphoneIcon />,
-    title: "iOS & Android",
-    description:
-      "A native mobile experience on both platforms, designed for quick checks on the go.",
-  },
-  {
-    icon: <UsersIcon />,
-    title: "Community Driven",
-    description:
-      "Powered by a growing community of conscious consumers who research and verify company ethics data.",
-  },
-];
 
 export default function Home() {
   return (
@@ -339,10 +184,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Features ── */}
+      {/* ── Built for Conscious Consumers ── */}
       <section className="px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-16 text-center">
+          <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Built for <span className="text-gradient">Conscious Consumers</span>
             </h2>
@@ -351,23 +196,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="glass-card group rounded-2xl p-7 transition-all duration-300"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-dark/15 text-emerald-dark transition-colors group-hover:bg-emerald-dark/25">
-                  {feature.icon}
-                </div>
-                <h3 className="mb-2 text-lg font-bold text-hero-heading">
-                  {feature.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-hero-muted">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+          <div className="mt-12 flex justify-center">
+            <Image
+              src="/dirtymoney_single_character.png"
+              alt="Dirty Money character"
+              width={800}
+              height={800}
+              className="w-full max-w-md rounded-2xl"
+            />
           </div>
         </div>
       </section>
