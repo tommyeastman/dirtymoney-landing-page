@@ -136,7 +136,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="animate-fade-in-up delay-300 relative z-10 mx-auto mt-6 w-full max-w-5xl">
+        <div className="animate-fade-in-up delay-300 relative z-10 mx-auto mt-6 w-full max-w-5xl -mx-6 md:mx-auto">
           <Image
             src="/hero-image.png"
             alt="Dirty Money app screenshot"
