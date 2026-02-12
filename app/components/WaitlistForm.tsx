@@ -114,10 +114,9 @@ export function WaitlistForm() {
             <Image
               src="/hero-image.png"
               alt="Dirty Money app screenshot"
-              width={4000}
-              height={2250}
+              width={800}
+              height={800}
               className="mb-5 w-full rounded-xl"
-              unoptimized
             />
 
             <h3 className="mb-2 text-xl font-bold text-hero-heading">

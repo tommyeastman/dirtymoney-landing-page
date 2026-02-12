@@ -103,7 +103,7 @@ export default function Home() {
       </nav>
 
       {/* ── Hero ── */}
-      <section className="hero-section relative overflow-hidden px-6 pt-24 pb-0 text-center">
+      <section className="hero-section relative overflow-hidden px-6 pt-24 pb-16 text-center">
         <div className="relative z-10 mx-auto max-w-4xl">
           <div className="animate-fade-in mb-8 inline-block rounded-full border border-emerald/30 bg-emerald/10 px-4 py-1.5 text-sm font-medium text-emerald-dark">
             Coming soon to iOS & Android
@@ -136,15 +136,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="animate-fade-in-up delay-300 relative z-10 mx-auto mt-6 w-full max-w-5xl -mx-6 md:mx-auto">
+        <div className="mt-12 flex justify-center">
           <Image
             src="/hero-image.png"
             alt="Dirty Money app screenshot"
-            width={4000}
-            height={2250}
-            className="w-full rounded-2xl"
+            width={800}
+            height={800}
+            className="w-full max-w-md rounded-2xl"
             priority
-            unoptimized
           />
         </div>
       </section>
