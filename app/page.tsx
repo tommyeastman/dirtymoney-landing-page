@@ -120,7 +120,20 @@ export default function Home() {
             your values.
           </p>
 
-          <div className="animate-fade-in-up delay-400 mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Image
+            src="/hero-image.png"
+            alt="Dirty Money app screenshot"
+            width={800}
+            height={800}
+            className="w-full max-w-md rounded-2xl"
+            priority
+          />
+        </div>
+
+        <div className="animate-fade-in-up delay-400 mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a
               href="#waitlist"
               className="animate-pulse-glow rounded-full bg-emerald px-8 py-3 text-base font-semibold text-white transition-all hover:bg-emerald-dark"
@@ -134,18 +147,6 @@ export default function Home() {
               See How It Works
             </a>
           </div>
-        </div>
-
-        <div className="mt-12 flex justify-center">
-          <Image
-            src="/hero-image.png"
-            alt="Dirty Money app screenshot"
-            width={800}
-            height={800}
-            className="w-full max-w-md rounded-2xl"
-            priority
-          />
-        </div>
       </section>
 
       {/* ── How It Works ── */}
