@@ -67,13 +67,13 @@ const steps = [
     icon: <UploadIcon />,
     title: "Connect Your Bank",
     description:
-      "Securely link your credit card or bank account. We never store your credentials.",
+      "Securely link your credit card or bank account.",
   },
   {
     icon: <FlagIcon />,
     title: "See Who You're Funding",
     description:
-      "We scan your transactions and flag every company tied to causes you care about — from climate to labor rights.",
+      "We scan your transactions and flag every company tied to causes you care about.",
   },
   {
     icon: <SwitchIcon />,
