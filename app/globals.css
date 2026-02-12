@@ -10,6 +10,9 @@
   --surface-light: #132613;
   --muted: #8a9b8a;
   --border: #1e3a1e;
+  --hero-bg: #ede8df;
+  --hero-heading: #1a1a18;
+  --hero-muted: #5c584e;
 }
 
 @theme inline {
@@ -22,6 +25,9 @@
   --color-surface-light: var(--surface-light);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-hero-bg: var(--hero-bg);
+  --color-hero-heading: var(--hero-heading);
+  --color-hero-muted: var(--hero-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -94,14 +100,33 @@ html {
   background-clip: text;
 }
 
+.text-gradient-dark {
+  background: linear-gradient(135deg, #059669, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero section */
+.hero-section {
+  background-color: var(--hero-bg);
+}
+
+.hero-section nav,
+.hero-section .nav-override {
+  background-color: var(--hero-bg);
+}
+
 /* Glass card effect */
 .glass-card {
-  background: rgba(12, 26, 12, 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(16, 185, 129, 0.1);
+  background: #ede8df !important;
+  border: 1px solid rgba(200, 194, 182, 0.6);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 .glass-card:hover {
-  border-color: rgba(16, 185, 129, 0.25);
-  background: rgba(19, 38, 19, 0.7);
+  border-color: rgba(16, 185, 129, 0.5);
+  background: #e8e2d8 !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
 }

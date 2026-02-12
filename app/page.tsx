@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { WaitlistForm } from "./components/WaitlistForm";
 
 function UploadIcon() {
@@ -242,14 +243,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans">
       {/* ── Navbar ── */}
-      <nav className="fixed top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-lg">
+      <nav className="fixed top-0 z-50 w-full border-b border-[#d5d0c7]/50 bg-hero-bg/90 backdrop-blur-lg">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <span className="text-xl font-bold tracking-tight text-foreground">
-            dirty<span className="text-gradient">money</span>
+          <span className="text-xl font-bold tracking-tight text-hero-heading">
+            dirty<span className="text-gradient-dark">money</span>
           </span>
           <a
             href="#waitlist"
-            className="rounded-full bg-emerald px-5 py-2 text-sm font-semibold text-background transition-all hover:bg-emerald-light hover:shadow-lg hover:shadow-emerald/20"
+            className="rounded-full bg-emerald px-5 py-2 text-sm font-semibold text-white transition-all hover:bg-emerald-dark hover:shadow-lg hover:shadow-emerald/20"
           >
             Join the Waitlist
           </a>
@@ -257,48 +258,53 @@ export default function Home() {
       </nav>
 
       {/* ── Hero ── */}
-      <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20 text-center">
-        {/* Background glow */}
-        <div className="pointer-events-none absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald/5 blur-[120px]" />
-
-        <div className="relative z-10 mx-auto max-w-3xl">
-          <div className="animate-fade-in mb-6 inline-block rounded-full border border-emerald/20 bg-emerald/5 px-4 py-1.5 text-sm font-medium text-emerald-light">
+      <section className="hero-section relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20 pb-32 text-center">
+        <div className="relative z-10 mx-auto max-w-4xl">
+          <div className="animate-fade-in mb-6 inline-block rounded-full border border-emerald/30 bg-emerald/10 px-4 py-1.5 text-sm font-medium text-emerald-dark">
             Coming soon to iOS & Android
           </div>
 
-          <h1 className="animate-fade-in-up text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl">
-            Know Where Your
+          <h1 className="animate-fade-in-up text-5xl font-bold leading-[1.1] tracking-tight text-hero-heading sm:text-6xl md:text-7xl">
+            Vote with Your
             <br />
-            <span className="text-gradient">Money Really Goes</span>
+            <span className="text-gradient-dark">Wallet</span>
           </h1>
 
-          <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
+          <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-hero-muted sm:text-xl">
             Dirty Money scans your bank transactions, flags companies funding
             unethical causes, and helps you find alternatives that align with
-            your values. Vote with your wallet.
+            your values.
           </p>
+
+          <div className="animate-fade-in-up delay-300 relative mx-auto mt-10 max-w-2xl">
+            <Image
+              src="/hero-image.jpg"
+              alt="Diverse group of people holding up money, voting with their wallets"
+              width={1400}
+              height={1378}
+              className="rounded-2xl"
+              priority
+              quality={100}
+              unoptimized
+            />
+          </div>
 
           <div className="animate-fade-in-up delay-400 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
               href="#waitlist"
-              className="animate-pulse-glow rounded-full bg-emerald px-8 py-3.5 text-base font-semibold text-background transition-all hover:bg-emerald-light"
+              className="animate-pulse-glow rounded-full bg-emerald px-8 py-3.5 text-base font-semibold text-white transition-all hover:bg-emerald-dark"
             >
               Get Early Access
             </a>
             <a
               href="#how-it-works"
-              className="rounded-full border border-border px-8 py-3.5 text-base font-semibold text-foreground transition-all hover:border-emerald/30 hover:bg-surface-light"
+              className="rounded-full border border-[#c5bfb3] px-8 py-3.5 text-base font-semibold text-hero-heading transition-all hover:border-emerald/50 hover:bg-[#e6e1d6]"
             >
               See How It Works
             </a>
           </div>
         </div>
 
-        {/* Scroll hint */}
-        <div className="animate-fade-in delay-700 absolute bottom-10 flex flex-col items-center gap-2 text-muted">
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <div className="h-8 w-px bg-gradient-to-b from-muted/50 to-transparent" />
-        </div>
       </section>
 
       {/* ── How It Works ── */}
@@ -320,16 +326,16 @@ export default function Home() {
                 key={step.title}
                 className="glass-card group relative rounded-2xl p-8 transition-all duration-300"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald/10 text-emerald transition-colors group-hover:bg-emerald/20">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-dark/15 text-emerald-dark transition-colors group-hover:bg-emerald-dark/25">
                   {step.icon}
                 </div>
-                <span className="mb-2 block text-sm font-semibold uppercase tracking-wider text-emerald">
+                <span className="mb-2 block text-sm font-semibold uppercase tracking-wider text-emerald-dark">
                   Step {i + 1}
                 </span>
-                <h3 className="mb-3 text-xl font-bold text-foreground">
+                <h3 className="mb-3 text-xl font-bold text-hero-heading">
                   {step.title}
                 </h3>
-                <p className="leading-relaxed text-muted">{step.description}</p>
+                <p className="leading-relaxed text-hero-muted">{step.description}</p>
               </div>
             ))}
           </div>
@@ -354,13 +360,13 @@ export default function Home() {
                 key={feature.title}
                 className="glass-card group rounded-2xl p-7 transition-all duration-300"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald/10 text-emerald transition-colors group-hover:bg-emerald/20">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-dark/15 text-emerald-dark transition-colors group-hover:bg-emerald-dark/25">
                   {feature.icon}
                 </div>
-                <h3 className="mb-2 text-lg font-bold text-foreground">
+                <h3 className="mb-2 text-lg font-bold text-hero-heading">
                   {feature.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-muted">
+                <p className="text-sm leading-relaxed text-hero-muted">
                   {feature.description}
                 </p>
               </div>
@@ -370,14 +376,14 @@ export default function Home() {
       </section>
 
       {/* ── Waitlist CTA ── */}
-      <section id="waitlist" className="px-6 py-24 sm:py-32">
+      <section id="waitlist" className="bg-[#ede8df] px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-hero-heading sm:text-4xl">
             Ready to Make Your
             <br />
-            <span className="text-gradient">Money Matter?</span>
+            <span className="text-gradient-dark">Money Matter?</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-muted">
+          <p className="mx-auto mt-4 max-w-md text-hero-muted">
             Join the waitlist to get early access when we launch. Be one of the
             first to take control of where your money goes.
           </p>
@@ -389,12 +395,12 @@ export default function Home() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-border/50 px-6 py-10">
+      <footer className="bg-[#ede8df] border-t border-[#d5d0c7] px-6 py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <span className="text-sm font-semibold tracking-tight text-foreground">
-            dirty<span className="text-gradient">money</span>
+          <span className="text-sm font-semibold tracking-tight text-hero-heading">
+            dirty<span className="text-gradient-dark">money</span>
           </span>
-          <p className="text-sm text-muted">
+          <p className="text-sm text-hero-muted">
             &copy; {new Date().getFullYear()} Dirty Money. All rights reserved.
           </p>
         </div>
