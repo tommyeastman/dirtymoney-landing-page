@@ -184,7 +184,7 @@ const steps = [
     icon: <UploadIcon />,
     title: "Connect Your Bank",
     description:
-      "Securely link your credit card or bank account, or simply upload a statement. We never store your credentials.",
+      "Securely link your credit card or bank account. We never store your credentials.",
   },
   {
     icon: <FlagIcon />,
@@ -243,7 +243,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans">
       {/* ── Navbar ── */}
-      <nav className="fixed top-0 z-50 w-full border-b border-[#d5d0c7]/50 bg-hero-bg/90 backdrop-blur-lg">
+      <nav className="fixed top-0 z-50 w-full border-b border-border-light/50 bg-hero-bg/90 backdrop-blur-lg">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <span className="text-xl font-bold tracking-tight text-hero-heading">
             dirty<span className="text-gradient-dark">money</span>
@@ -258,53 +258,50 @@ export default function Home() {
       </nav>
 
       {/* ── Hero ── */}
-      <section className="hero-section relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20 pb-32 text-center">
+      <section className="hero-section relative overflow-hidden px-6 pt-24 pb-0 text-center">
         <div className="relative z-10 mx-auto max-w-4xl">
-          <div className="animate-fade-in mb-6 inline-block rounded-full border border-emerald/30 bg-emerald/10 px-4 py-1.5 text-sm font-medium text-emerald-dark">
+          <div className="animate-fade-in mb-8 inline-block rounded-full border border-emerald/30 bg-emerald/10 px-4 py-1.5 text-sm font-medium text-emerald-dark">
             Coming soon to iOS & Android
           </div>
 
-          <h1 className="animate-fade-in-up text-5xl font-bold leading-[1.1] tracking-tight text-hero-heading sm:text-6xl md:text-7xl">
-            Vote with Your
-            <br />
-            <span className="text-gradient-dark">Wallet</span>
+          <h1 className="animate-fade-in-up text-4xl font-bold leading-[1.1] tracking-tight text-hero-heading sm:text-5xl md:text-6xl">
+            Vote with Your{" "}
+            <span className="text-gradient-dark">Wallet.</span>
           </h1>
 
-          <p className="animate-fade-in-up delay-200 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-hero-muted sm:text-xl">
+          <p className="animate-fade-in-up delay-200 mx-auto mt-4 max-w-xl text-base leading-relaxed text-hero-muted sm:text-lg">
             Dirty Money scans your bank transactions, flags companies funding
             unethical causes, and helps you find alternatives that align with
             your values.
           </p>
 
-          <div className="animate-fade-in-up delay-300 relative mx-auto mt-10 max-w-2xl">
-            <Image
-              src="/hero-image.jpg"
-              alt="Diverse group of people holding up money, voting with their wallets"
-              width={1400}
-              height={1378}
-              className="rounded-2xl"
-              priority
-              quality={100}
-              unoptimized
-            />
-          </div>
-
-          <div className="animate-fade-in-up delay-400 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <div className="animate-fade-in-up delay-400 mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a
               href="#waitlist"
-              className="animate-pulse-glow rounded-full bg-emerald px-8 py-3.5 text-base font-semibold text-white transition-all hover:bg-emerald-dark"
+              className="animate-pulse-glow rounded-full bg-emerald px-8 py-3 text-base font-semibold text-white transition-all hover:bg-emerald-dark"
             >
               Get Early Access
             </a>
             <a
               href="#how-it-works"
-              className="rounded-full border border-[#c5bfb3] px-8 py-3.5 text-base font-semibold text-hero-heading transition-all hover:border-emerald/50 hover:bg-[#e6e1d6]"
+              className="rounded-full border border-border-muted px-8 py-3 text-base font-semibold text-hero-heading transition-all hover:border-emerald hover:text-emerald-dark"
             >
               See How It Works
             </a>
           </div>
         </div>
 
+        <div className="animate-fade-in-up delay-300 relative z-10 mx-auto mt-6 w-full max-w-5xl">
+          <Image
+            src="/hero-image.png"
+            alt="Dirty Money app screenshot"
+            width={4000}
+            height={2250}
+            className="w-full rounded-2xl"
+            priority
+            unoptimized
+          />
+        </div>
       </section>
 
       {/* ── How It Works ── */}
@@ -376,7 +373,7 @@ export default function Home() {
       </section>
 
       {/* ── Waitlist CTA ── */}
-      <section id="waitlist" className="bg-[#ede8df] px-6 py-24 sm:py-32">
+      <section id="waitlist" className="bg-hero-bg px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-hero-heading sm:text-4xl">
             Ready to Make Your
@@ -395,7 +392,7 @@ export default function Home() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#ede8df] border-t border-[#d5d0c7] px-6 py-10">
+      <footer className="bg-hero-bg border-t border-border-light px-6 py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
           <span className="text-sm font-semibold tracking-tight text-hero-heading">
             dirty<span className="text-gradient-dark">money</span>
